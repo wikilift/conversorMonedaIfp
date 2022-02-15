@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    android:background="@drawable/gradient"
+    tools:context=".MainScreen">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/txt_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Introducza la cantidad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="198dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="Introduzca la cantidad"
+        android:text="euros -> dolares"
+        android:drawableLeft="@drawable/ic_baseline_euro_24"
+        android:drawableRight="@drawable/ic_baseline_attach_money_24"
+        app:layout_constraintEnd_toEndOf="@+id/txt_input"
+        app:layout_constraintStart_toStartOf="@+id/txt_input"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Dolares -> Eruos"
+        android:drawableRight="@drawable/ic_baseline_euro_24"
+        android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/purple_700"
+        android:textSize="25dp"
+        android:drawableRight="@drawable/ic_baseline_content_paste_24"
+        android:visibility="gone"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:text="result" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
